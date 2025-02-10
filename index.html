@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>万象社区</title>
+		<link rel="icon" href="./img/icon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="./css/css.css" type="text/css">
+
+	</head>
+	<body>
+
+		<div id="title">
+			<img src="./img/pt.svg" style="height: 70%;">
+		</div>
+
+		<div id=zs>
+			<div>
+				<p style="font-weight:bold;font-size: 40px">管理员</p>
+			</div>
+			<div id="dd">
+				<div style="text-align: center">
+					<img class="zg" src="img/zg.jpg">
+					<p id="glp">青云_Long</p>
+				</div>
+				<div style="text-align: center">
+					<img class="zg" src="img/gl1.jpg">
+					<p id="glp">友好</p>
+				</div style="text-align: center">
+				<div>
+					<img class="zg" src="img/gl2.jpg">
+					<p id="glp">毅尘mz</p>
+				</div style="text-align: center">
+				<div>
+					<img class="zg" src="img/gl3.jpg">
+					<p id="glp">玉米豆</p>
+				</div>
+			</div>
+			<div>
+
+				<p style="font-weight:bold;font-size: 40px">加入我们
+				</p>
+				<div id="p">
+					<a id="glp" href="https://qm.qq.com/q/dcOkJxPr4A">点击此处加入群聊</a>
+
+					<p id="glp">或者使用QQ号</p>
+				</div>
+				<div id="p"><textarea readonly id="tp">809774525</textarea>
+					<button id="copyButton">复制</button>
+				</div>
+				<script>
+					document.getElementById("copyButton").addEventListener("click", function() {
+						var textArea = document.getElementById("tp");
+						if (navigator.clipboard) {
+							navigator.clipboard.writeText(textArea.value).then(function() {
+								var copyButton = document.getElementById("copyButton");
+								var originalText = copyButton.innerText;
+								copyButton.innerText = "复制成功!";
+								setTimeout(function() {
+									copyButton.innerText = originalText;
+								}, 2000);
+							}).catch(function(error) {
+								alert("复制失败: " + error);
+							});
+						} else {
+							textArea.select();
+							textArea.setSelectionRange(0, 99999);
+							document.execCommand("copy");
+							alert("已复制: " + textArea.value);
+						}
+					});
+				</script>
+				<p style="font-weight:bold;font-size: 40px">群规宪规
+				</p>
+				<textarea readonly id="tq">群规万象交流平台•总群规-第7版
+https://docs.qq.com/aio/DQ1p2d0hSeWxaTnVk
+万象交流平台•宪规-第8版
+https://docs.qq.com/aio/DQ0xXcmNxUmpHaFFp
+</textarea>
+				<p style="font-weight:bold;font-size: 40px">提意见</p>
+				<textarea readonly id="tq">群聊管理意见提供：
+https://forms.office.com/r/kPVbMyuWbP
+您的意见提供将对我们的群聊管理提供莫大帮助
+</textarea>
+
+			</div>
+		</div>
+	</body>
+</html>
